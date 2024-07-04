@@ -660,7 +660,7 @@ void masked_karatsuba_all(uint64_t p1[R_64_TAB][D+1], uint64_t p2[R_64_TAB][D+1]
 	
 	uint64_t out_double[R_64_TAB*2][D+1] = {0};
 	
-	masked_karatsuba_F2(p1, p2, out_double, 0, RPUI);
+	masked_karatsuba_F2(p1_pui, p2_pui, out_double, 0, RPUI);
 	modulo(out_double, out);
 }
 
