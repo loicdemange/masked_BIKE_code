@@ -1232,11 +1232,7 @@ void masked_fast_inversion(uint64_t x_sparse[][D+1], uint64_t out[R_64_TAB][D+1]
 		
 	}
 
-	for(int i = 0; i < R_64_TAB; ++i)
-	{
-		for(int d = 0; d<=D; ++d)
-			out[i][d] = t[i][d] << 1;
-	}
+	sec_elevation(out, t, 2);
 	memcpy(out, t, R_64_TAB * (D+1) * 8);	
 }
 
